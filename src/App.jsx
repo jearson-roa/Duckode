@@ -4,6 +4,7 @@ import Footer from "./components/Footer";
 import {Routes, Route} from "react-router-dom";
 import Portafolio from "./pages/Portafolio";
 
+
 function Home() {
   return (
     <>
@@ -350,7 +351,6 @@ function App(){
         <Route path="/" element={<Home />} />
         <Route path="/portafolio" element={<Portafolio />} />
       </Routes>
-
        <Footer />
         </>
     );
