@@ -18,7 +18,7 @@ function App() {
               {"</>"} Desarrollo web profesional
             </span>
 
-            <h1 className="mt-6 sm:mt-8 text-xl sm:text-xl md:text-6xl font-bold leading-tight text-[#111827]">
+            <h1 className="mt-6 text-2xl sm:text-3xl md:text-3xl lg:text-5xl font-bold leading-tight text-[#111827]">
               Transformo ideas en
               <span className="text-yellow-600 block">
                 Soluciones digitales
