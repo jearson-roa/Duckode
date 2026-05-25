@@ -1,6 +1,6 @@
 function Portafolio() {
   return (
-    <section className="min-h-screen bg-white pt-28 px-4 sm:px-6 pb-20">
+    <section className="min-h-screen bg-[#F4EDB5] pt-28 px-4 sm:px-6 pb-20">
       
       {/* HEADER */}
       <div className="max-w-6xl mx-auto text-center">
