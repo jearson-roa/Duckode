@@ -1,13 +1,12 @@
 import { useState } from "react";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import {Routes, Route} from "react-router-dom";
+import Portafolio from "./pages/Portafolio";
 
-function App() {
-  const [count, setCount] = useState(0);
-
+function Home() {
   return (
     <>
-      <Navbar />
 
       <section className="min-h-screen bg-[#F4EDB5] flex items-center px-4 sm:px-6 pt-28 pb-12">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
@@ -338,9 +337,23 @@ function App() {
 
     </section>
 
-      <Footer />
     </>
   );
+}
+
+function App(){
+    return(
+        <>
+        <Navbar/>
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/portafolio" element={<Portafolio />} />
+      </Routes>
+
+       <Footer />
+        </>
+    );
 }
 
 export default App;

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";  
 import logo from "../assets/img/logo.png";
 
 function Navbar() {
@@ -10,13 +11,13 @@ function Navbar() {
       <div className="flex items-center justify-between h-full">
 
         {/* Logo */}
-        <a href="/" className="flex items-center gap-2">
+        <Link to="/" className="flex items-center gap-2">
           <img
             src={logo}
             alt="Duckode"
             className="h-10 w-auto object-contain"
           />
-        </a>
+        </Link>
 
         {/* Botón móvil */}
         <button
@@ -31,31 +32,45 @@ function Navbar() {
         {/* Links desktop */}
         <ul className="hidden md:flex items-center gap-6">
           <li>
-            <a href="#" className="hover:text-gray-300 transition">
+            <Link to="/" className="hover:text-gray-300 transition">
               Inicio
-            </a>
+            </Link>
           </li>
+
           <li>
-            <a href="#" className="hover:text-gray-300 transition">
-              Servicios
-            </a>
+            <Link to="/portafolio" className="hover:text-gray-300 transition">
+              Portafolio
+            </Link>
           </li>
+
           <li>
-            <a href="#" className="hover:text-gray-300 transition">
+            <Link to="/contacto" className="hover:text-gray-300 transition">
               Contacto
-            </a>
+            </Link>
           </li>
         </ul>
+
       </div>
 
       {/* Menú móvil */}
       {open && (
-<div className="md:hidden mt-4 flex flex-col gap-4 text-center border-t border-white/10 pt-4 bg-black/95 rounded-xl py-4">
-  <a href="#" className="hover:text-gray-300">Inicio</a>
-  <a href="#" className="hover:text-gray-300">Servicios</a>
-  <a href="#" className="hover:text-gray-300">Contacto</a>
-</div>
+        <div className="md:hidden mt-4 flex flex-col gap-4 text-center border-t border-white/10 pt-4 bg-black/95 rounded-xl py-4">
+
+          <Link to="/" onClick={() => setOpen(false)}>
+            Inicio
+          </Link>
+
+          <Link to="/portafolio" onClick={() => setOpen(false)}>
+            Portafolio
+          </Link>
+
+          <Link to="/contacto" onClick={() => setOpen(false)}>
+            Contacto
+          </Link>
+
+        </div>
       )}
+
     </nav>
   );
 }
